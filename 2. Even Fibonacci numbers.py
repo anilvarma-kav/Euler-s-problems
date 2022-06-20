@@ -30,6 +30,15 @@ def sum_of_even_fib_terms(limit):
             s = s + l
     return s
 
+def sum_of_even_fib_terms_best_solution(limit):
+    a , b = 1, 1
+    t = 0
+    while a <= limit:
+        if a % 2 == 0:
+            t = t + a
+        a,b = b, a + b  # the real formula for Fibonacci sequence
+    return t
+
 
 if __name__ == '__main__':
-    print(sum_of_even_fib_terms(4000000))
+    print(sum_of_even_fib_terms_best_solution(4000000))
